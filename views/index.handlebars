@@ -1,0 +1,54 @@
+<div class="container">
+
+  <div class="row py-3">
+    <div class="col-12 text-center">
+      <h1>Choose one to say some trash talk. @#$%^*!</h1>
+    </div>
+  </div>
+
+  <form method="POST" action="/">
+
+    <div class="form-row">
+      <div class="form-group col-md-4">
+        <label for="engineer" class="avatar"><img
+            src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
+            alt="target engineer photo"></label>
+        <div class="custom-control custom-radio text-center">
+          <input type="radio" id="engineer" name="target" value="engineer" class="custom-control-input"
+            {{#ifCond target '===' 'engineer'}} checked {{/ifCond}}>
+          <label class="custom-control-label" for="engineer"><big>Engineer</big></label>
+        </div>
+      </div>
+      <div class="form-group col-md-4">
+        <label for="designer" class="avatar"><img
+            src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"
+            alt="target designer photo"></label>
+        <div class="custom-control custom-radio text-center">
+          <input type="radio" id="designer" name="target" value="designer" class="custom-control-input"
+            {{#ifCond target '===' 'designer'}} checked {{/ifCond}}>
+          <label class="custom-control-label" for="designer"><big>Designer</big></label>
+        </div>
+      </div>
+      <div class="form-group col-md-4">
+        <label for="entrepreneur" class="avatar"><img
+            src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
+            alt="target entrepreneur photo"></label>
+        <div class="custom-control custom-radio text-center">
+          <input type="radio" id="entrepreneur" name="target" value="entrepreneur" class="custom-control-input"
+            {{#ifCond target '===' 'entrepreneur'}} checked {{/ifCond}}>
+          <label class="custom-control-label" for="entrepreneur"><big>Entrepreneur</big></label>
+        </div>
+      </div>
+    </div>
+
+    <div class="row text-center mt-3">
+      <div class="col-2">
+        <button class="btn btn-success btn-lg" type="submit">Generate</button>
+      </div>
+      <div class="col-10">
+        <textarea cols="70" rows="3">{{trashTalk}}</textarea>
+      </div>
+    </div>
+
+  </form>
+</div>
